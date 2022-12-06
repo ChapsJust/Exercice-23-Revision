@@ -1,13 +1,141 @@
-:root{
---couleur-background :#282c34;
---couleur-texte :	#e3e7ed;
---couleur-texte-bleu : #169fe3;
---couleur-background-bouton :	#3c3f49;
---couleur-background-bouton-select : rgba(22,159,227,0.7);
---couleur-background-bouton-hover :	#3794c3; 
+:root {
+  --couleur-background: #282c34;
+  --couleur-texte: #e3e7ed;
+  --couleur-texte-bleu: #169fe3;
+  --couleur-background-bouton: #3c3f49;
+  --couleur-background-bouton-select: rgba(22, 159, 227, 0.7);
+  --couleur-background-bouton-hover: #3794c3;
 }
 @font-face {
   font-family: Maximum-Impact;
   src: url(../webfonts/Maximum-Impact.ttf);
 }
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.grid_container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  background-color: var(--couleur-background);
+  grid-template-areas: "gauche droite";
+  padding: 2em;
+}
+.gauche {
+  grid-area: gauche;
+}
+.WrapImage {
+  display: flex;
+  flex-wrap: wrap;
+}
+.WrapImage img {
+  height: 20em;
+  width: 13em;
+}
+.item {
+  width: 250px;
+  text-align: center;
+  display: block;
+  background-color: transparent;
+  border: 1px solid transparent;
+  margin-bottom: 1em;
+}
+.item span {
+  padding-left: 1em;
+  color: rgb(221, 219, 219);
+}
+.droite {
+  grid-area: droite;
+}
+.header {
+  padding-left: 2em;
+  color: white;
+}
+.header img {
+  width: 100%;
+}
+.TitleFooter h3 {
+  color: #4a4b4c;
+}
+.TitleFooter button {
+  height: 2em;
+  width: auto;
+  border-radius: 10px;
+  border: none;
+  background-color: #a5a5a6;
+  color: white;
+}
+.TitleFooter button:hover {
+  background-color: white;
+  color: black;
+}
 
+/* Droite */
+
+.droite {
+  padding-left: 3em;
+}
+.droite h2 {
+  color: rgb(214, 210, 210);
+}
+.droite p {
+  color: rgb(219, 217, 217);
+}
+.icons {
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-bottom: 2em;
+}
+.icons i {
+  padding-right: 1em;
+}
+.icons span {
+  padding-right: 2em;
+  margin-bottom: 1em;
+}
+.border fieldset {
+  color: white;
+  height: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.border legend {
+  text-align: left;
+}
+.FormButton {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". montant montant";
+  width: 100%;
+}
+.FormButton input {
+  background-color: var(--couleur-background-bouton);
+  border: none;
+  margin-bottom: 1em;
+  margin-right: 1em;
+  grid-area: montant;
+}
+.priceButton {
+  background-color: var(--couleur-background-bouton);
+  border: none;
+  color: white;
+  margin-bottom: 1em;
+  margin-right: 1em;
+  height: 3em;
+}
+#validation {
+  margin-right: 0.8em;
+}
+#validation button {
+  width: 100%;
+  height: 3em;
+  border: none;
+  color: var(--couleur-texte);
+  background-color: var(--couleur-background-bouton);
+}

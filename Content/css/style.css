@@ -29,6 +29,7 @@ body {
   flex-wrap: wrap;
 }
 .WrapImage img {
+  margin-top: 1em;
   height: 20em;
   width: 13em;
 }
@@ -39,10 +40,17 @@ body {
   background-color: transparent;
   border: 1px solid transparent;
   margin-bottom: 1em;
+  transition: all 0.3s ease-in-out;
 }
 .item span {
   padding-left: 1em;
   color: rgb(221, 219, 219);
+}
+.item:hover {
+  transform: scale(1.1);
+  background: #303031;
+  border: 2px solid rgb(0, 195, 255);
+  box-shadow: 0 0 6px rgb(0, 195, 255);
 }
 .droite {
   grid-area: droite;

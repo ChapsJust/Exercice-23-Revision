@@ -147,3 +147,14 @@ body {
   color: var(--couleur-texte);
   background-color: var(--couleur-background-bouton);
 }
+
+/* Media Queries */
+
+@media screen and (max-width: 900px) {
+  .grid_container {
+    grid-template-areas:
+      "gauche"
+      "droite";
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
